@@ -1,0 +1,13 @@
+org_name: nullstone
+name: aws-ecs-namespace
+friendly_name: ECS Namespace
+description: A Terraform module to create a Nullstone cluster namespace for containers running on AWS ECS.
+category: cluster-namespace
+subcategory: ""
+provider_types:
+    - aws
+platform: ecs
+subplatform: ""
+type: ""
+appCategories: []
+is_public: true
