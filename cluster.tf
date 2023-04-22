@@ -1,6 +1,6 @@
 data "ns_connection" "cluster" {
   name     = "cluster"
-  contract = "cluster/aws/ecs:*"
+  contract = "cluster/aws/ecs:ec2"
 }
 
 locals {
