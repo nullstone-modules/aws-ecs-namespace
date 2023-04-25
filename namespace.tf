@@ -1,5 +1,5 @@
 locals {
-  namespace = local.env_name
+  namespace = coalesce(var.override, local.env_name)
 }
 
 resource "aws_service_discovery_private_dns_namespace" "service" {
