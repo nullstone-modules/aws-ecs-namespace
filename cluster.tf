@@ -28,7 +28,7 @@ resource "aws_ecs_cluster" "namespace" {
 resource "aws_ecs_cluster_capacity_providers" "this" {
   count = local.is_preview_env ? 1 : 0
 
-  cluster_name       = aws_ecs_cluster.namespace.name
+  cluster_name       = aws_ecs_cluster.namespace[count.index].name
   capacity_providers = [local.capacity_provider_name]
 
   default_capacity_provider_strategy {
