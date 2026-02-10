@@ -67,5 +67,5 @@ resource "aws_iam_policy" "deployers" {
 
   name   = "deployers-${local.resource_name}"
   tags   = local.tags
-  policy = data.aws_iam_policy_document.deployer.json
+  policy = data.aws_iam_policy_document.deployer[count.index].json
 }

@@ -1,5 +1,8 @@
+# 0.1.6 (Feb 10, 2026)
+* Fixed syntax of deployers policy.
+
 # 0.1.5 (Feb 10, 2026)
-* Use cluster deployers policy if no preview env
+* Use cluster deployers policy if no preview env.
 
 # 0.1.4 (Feb 10, 2026)
 * Added deployers IAM policy.
