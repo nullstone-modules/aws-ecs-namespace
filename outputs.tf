@@ -10,7 +10,17 @@ output "cluster_name" {
 
 output "deployers_name" {
   value       = local.deployers_name
-  description = "string ||| Name of the deployers IAM Group that is allowed to deploy to the Fargate cluster."
+  description = "string ||| Name of the deployers IAM Group that is allowed to deploy to the ECS cluster."
+}
+
+output "deployers_policy_name" {
+  value       = aws_iam_policy.deployers.name
+  description = "string ||| Name of the deployers IAM Policy that is allowed to deploy to the ECS cluster."
+}
+
+output "deployers_policy_arn" {
+  value       = aws_iam_policy.deployers.arn
+  description = "string ||| ARN of the deployers IAM Policy that is allowed to deploy to the ECS cluster."
 }
 
 output "namespace" {

@@ -61,3 +61,11 @@ data "aws_iam_policy_document" "deployer" {
     }
   }
 }
+
+resource "aws_iam_policy" "deployers" {
+  count = local.is_preview_env ? 1 : 0
+
+  name   = "deployers-${local.resource_name}"
+  tags   = local.tags
+  policy = data.aws_iam_policy_document.deployer.json
+}

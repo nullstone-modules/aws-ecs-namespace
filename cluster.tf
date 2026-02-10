@@ -6,9 +6,11 @@ data "ns_connection" "cluster" {
 locals {
   capacity_provider_name = data.ns_connection.cluster.outputs.capacity_provider_name
 
-  cluster_arn    = local.is_preview_env ? aws_ecs_cluster.namespace[0].arn : data.ns_connection.cluster.outputs.cluster_arn
-  cluster_name   = local.is_preview_env ? aws_ecs_cluster.namespace[0].name : data.ns_connection.cluster.outputs.cluster_name
-  deployers_name = local.is_preview_env ? aws_iam_group.deployers[0].name : data.ns_connection.cluster.outputs.deployers_name
+  cluster_arn           = local.is_preview_env ? aws_ecs_cluster.namespace[0].arn : data.ns_connection.cluster.outputs.cluster_arn
+  cluster_name          = local.is_preview_env ? aws_ecs_cluster.namespace[0].name : data.ns_connection.cluster.outputs.cluster_name
+  deployers_name        = local.is_preview_env ? aws_iam_group.deployers[0].name : data.ns_connection.cluster.outputs.deployers_name
+  deployers_policy_name = local.is_preview_env ? aws_iam_policy.deployers[0].name : data.ns_connection.cluster.outputs.deployers_policy_name
+  deployers_policy_arn  = local.is_preview_env ? aws_iam_policy.deployers[0].arn : data.ns_connection.cluster.outputs.deployers_policy_arn
 }
 
 resource "aws_ecs_cluster" "namespace" {
