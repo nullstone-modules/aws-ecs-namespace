@@ -14,12 +14,12 @@ output "deployers_name" {
 }
 
 output "deployers_policy_name" {
-  value       = aws_iam_policy.deployers.name
+  value       = local.deployers_policy_name
   description = "string ||| Name of the deployers IAM Policy that is allowed to deploy to the ECS cluster."
 }
 
 output "deployers_policy_arn" {
-  value       = aws_iam_policy.deployers.arn
+  value       = local.deployers_policy_arn
   description = "string ||| ARN of the deployers IAM Policy that is allowed to deploy to the ECS cluster."
 }
 
