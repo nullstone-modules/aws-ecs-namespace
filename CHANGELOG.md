@@ -1,6 +1,6 @@
 # 0.3.0 (Oct 14, 2026)
 * Recorded ECS task state-change events for preview clusters in a `<cluster>-executions` CloudWatch log group so Nullstone can show task-app execution history past ECS's one-hour retention.
-* Added `executions_retention_in_days` (default 90, preview clusters only) and output `executions_log_group_name`, which passes through from the connected cluster outside preview environments.
+* Added `executions_retention_in_days` (default 30, preview clusters only) and output `executions_log_group_name`, which passes through from the connected cluster outside preview environments.
 * Granted preview deployers read access to the executions log group.
 * Upgraded `nullstone-io/ns` provider to `~> 0.13.0`.
 

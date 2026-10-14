@@ -11,7 +11,7 @@ EOF
 
 variable "executions_retention_in_days" {
   type        = number
-  default     = 90
+  default     = 30
   description = <<EOF
 The number of days to keep ECS task state-change events for a preview cluster.
 This is how far back Nullstone can show execution history for task apps.
