@@ -1,3 +1,7 @@
+# 0.2.0 (Jun 25, 2026)
+* Upgraded `ns` provider to `0.11.1`.
+* Switched to `aws_tags` for proper resource attribution.
+
 # 0.1.6 (Feb 10, 2026)
 * Fixed syntax of deployers policy.
 
