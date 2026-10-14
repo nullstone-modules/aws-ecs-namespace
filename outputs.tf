@@ -32,3 +32,8 @@ output "service_discovery_id" {
   value       = aws_service_discovery_private_dns_namespace.service.id
   description = "string ||| "
 }
+
+output "executions_log_group_name" {
+  value       = local.executions_log_group_name
+  description = "string ||| Name of the CloudWatch log group holding ECS task state-change events for the cluster. Empty when the cluster module predates execution history."
+}
